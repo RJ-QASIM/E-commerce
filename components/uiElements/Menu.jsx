@@ -7,8 +7,14 @@ import { category } from "@/data/Navdata";
 import Image from "next/image";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-
+import { useDispatch, useSelector } from "react-redux";
+import { GET_CATOGERY } from "@/redux/reducer/catogry";
 export default function FadeMenu() {
+  const dispatch = useDispatch();
+
+  const { getcategory } = useSelector((state) => state.category);
+  // console.log(getcategory, "getcategory");
+
   const [anchorEl, setAnchorEl] = useState(null);
 
   const [getword, setgetWord] = useState({
@@ -21,6 +27,9 @@ export default function FadeMenu() {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = (data) => {
+    const category = data.cate;
+    dispatch(GET_CATOGERY(category));
+
     setgetWord(
       data
         ? data

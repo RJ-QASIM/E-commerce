@@ -99,26 +99,43 @@ export const index = [
       },
     ],
   },
+];
+
+export const othercategory = [
+  {
+    title: "Dairy",
+    type: "Bakery",
+    suncatagory: ["Juice", "Cake", "Tea"],
+  },
+  {
+    title: "Dairy",
+    type: "Makeup",
+    suncatagory: ["Face", "Eye", "Lips"],
+  },
+  {
+    title: "Dairy",
+    type: "Clothing",
+    suncatagory: ["Pants", "Shirts", "Women Dress", "Man Dress"],
+  },
+  {
+    title: "Dairy",
+    type: "Furniture",
+    suncatagory: ["Bed", "Chair", "Sofa", "Table"],
+  },
+  {
+    title: "Dairy",
+    type: "Books",
+    suncatagory: ["English", "Urdu", "Poets"],
+  },
   {
     title: "Dairy",
     type: "Bags",
     suncatagory: [
-      {
-        title: "Milk",
-        category: "Milk",
-      },
-      {
-        title: "Butter",
-        category: "Butter",
-      },
-      {
-        title: "Egg",
-        category: "Egg",
-      },
-      {
-        title: "Yogurt",
-        category: "Yogurt",
-      },
+      "Hands Bags",
+      "Laptop Bags",
+      "Shoulder Bags",
+      "Purse",
+      "Wallet",
     ],
   },
 ];
