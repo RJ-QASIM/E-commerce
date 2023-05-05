@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { index, othercategory } from "@/data/Navdata";
+
 const catogerySlice = createSlice({
   name: "profile",
   initialState: {
@@ -13,19 +14,11 @@ const catogerySlice = createSlice({
     },
 
     GET_CATOGERY(state, action) {
-      console.log(action.payload, "jjj");
-      state.getcategory = action.payload;
+      let result;
+      result = othercategory.filter((items) => items.type === action.payload);
 
-      let filterData;
-      {
-        action.payload === "Grocery"
-          ? (filterData = index.filter((elm) => elm.type === action.payload))
-          : (filterData = othercategory.filter(
-              (elm) => elm.type === action.payload
-            ));
-      }
-      state.category = filterData;
-      console.log(filterData, "filterData");
+      result = action.payload === "grocery" ? index : result;
+      state.category = result;
     },
   },
 });

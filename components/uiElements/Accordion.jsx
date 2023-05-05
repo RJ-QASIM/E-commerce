@@ -5,14 +5,12 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { useDispatch } from "react-redux";
-import { GET_TYPE } from "@/redux/reducer/products";
+import { GET_MAINTYPE, GET_TYPE } from "@/redux/reducer/products";
 import { useSelector } from "react-redux";
 
 export default function Accordio({ elm }) {
-  console.log(elm, "elm");
   const dispatch = useDispatch();
   const { otherCategory } = useSelector((state) => state.category);
-  console.log(otherCategory, "otherCategory");
   return (
     <div>
       {elm.type === "grocery" ? (
@@ -25,10 +23,11 @@ export default function Accordio({ elm }) {
             <Typography>{elm.title}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            {elm?.suncatagory?.map((item) => (
+            {elm?.suncatagory?.map((item, ind) => (
               <Typography
                 className=" p-3"
                 onClick={() => dispatch(GET_TYPE(item.title))}
+                key={ind}
               >
                 {item.title}
               </Typography>
@@ -38,7 +37,10 @@ export default function Accordio({ elm }) {
       ) : (
         <>
           {elm?.suncatagory.map((elm) => (
-            <p className="border text-base font-semibold p-4 cursor-pointer">
+            <p
+              className="border text-base font-semibold p-4 cursor-pointer"
+              onClick={() => dispatch(GET_TYPE(elm))}
+            >
               {elm}
             </p>
           ))}

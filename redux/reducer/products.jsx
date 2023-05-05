@@ -6,6 +6,7 @@ const productsSlice = createSlice({
   initialState: {
     products: products,
     type: null,
+    maintype: "grocery",
   },
 
   reducers: {
@@ -14,11 +15,19 @@ const productsSlice = createSlice({
     },
     GET_TYPE(state, action) {
       const filterData = products.filter((elm) => elm.type === action.payload);
+
       state.type = action.payload;
+      state.products = filterData;
+    },
+    GET_MAINTYPE(state, action) {
+      state.maintype = action.payload;
+      const filterData = products.filter(
+        (elm) => elm.maintyp === action.payload
+      );
       state.products = filterData;
     },
   },
 });
 
-export const { PRODUCTS, GET_TYPE } = productsSlice.actions;
+export const { PRODUCTS, GET_TYPE, GET_MAINTYPE } = productsSlice.actions;
 export default productsSlice.reducer;

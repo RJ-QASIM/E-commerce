@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "../uiElements/Menu";
 export default function Nav() {
   return (
-    <div className="border flex justify-between items-center py-6 px-12 ">
+    <div className="border flex justify-between items-center h-20 px-12 ">
       <div className="flex justify-between  w-96   ">
         <div>
           <h1 className="text-[#171F6A]  text-3xl font-bold ">
