@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Modals from "../uiElements/Modal";
 
 export default function Products({ elm }) {
   return (
@@ -24,13 +25,12 @@ export default function Products({ elm }) {
         </div>
         <div className=" p-4 ">
           <div className="font-semibold text-black">
-            {elm?.price}
-            <del className="text-gray-500 ml-3 ">150%</del>
+            {elm?.price}$<del className="text-gray-500 ml-3 ">150$</del>
           </div>
           <div className="text-gray-700 text-xs">{elm?.type}</div>
         </div>
-        <h1 className="bg-[#019376] text-center rounded-b-3xl text-white">
-          Add to cart
+        <h1 className="bg-[#019376] text-center cursor-pointer rounded-b-3xl text-white">
+          <Modals elm={elm} />
         </h1>
       </div>
     </>

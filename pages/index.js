@@ -9,6 +9,8 @@ import Product from "@/components/pages/Products";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import { bgImg } from "@/data/Navdata";
+import Modal from "@/components/uiElements/Modal";
+import Drawer from "@/components/uiElements/Drawer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -35,6 +37,7 @@ export default function Home() {
 
   return (
     <>
+      <Drawer />
       <Nav />
       <div className="min-h-[calc(100vh-80px)] w-full relative ">
         <div className="absolute top-40 z-50 w-full flex flex-col items-center">
