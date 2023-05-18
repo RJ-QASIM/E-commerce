@@ -19,8 +19,8 @@ export default function Home() {
   const { products, maintype } = useSelector((state) => state.products);
   const { category } = useSelector((state) => state.category);
 
-  console.log(maintype, "maintype");
-  console.log(getData, "getdata");
+  // console.log(maintype, "maintype");
+  // console.log(getData, "getdata");
 
   useEffect(() => {
     setGetData(bgImg.filter((elm) => elm.type === maintype));
@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <Drawer />
-      <Nav />
+      {/* <Nav /> */}
       <div className="min-h-[calc(100vh-80px)] w-full relative ">
         <div className="absolute top-40 z-50 w-full flex flex-col items-center">
           <p className="font-bold text-4xl text-[#1F2937] ">

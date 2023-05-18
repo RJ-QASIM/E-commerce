@@ -13,6 +13,7 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import Drawers from "./Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import { ADDTOCART } from "@/redux/reducer/addtocart";
+import { useRouter } from "next/router";
 const style = {
   position: "absolute",
   top: "50%",
@@ -34,11 +35,18 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function Modals({ elm }) {
+  console.log(elm, "elm");
+  const router = useRouter();
   const dispatch = useDispatch();
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   console.log(open, "open");
+
+  const handleOpen = () => {
+    router.push(`/products/${elm.type}`);
+    setOpen(true);
+  };
+
   return (
     <div>
       <Button onClick={handleOpen} sx={{ color: "white" }}>

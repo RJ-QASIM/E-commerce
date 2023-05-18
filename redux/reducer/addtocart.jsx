@@ -28,26 +28,44 @@ const productsSlice = createSlice({
 
     COUNTER(state, action) {
       const data = JSON.parse(JSON.stringify(state.cartItem));
-      const foundProduct = data.find(
-        (item) => item.type === action.payload.incData
-      );
-      const index = data.findIndex(
-        (product) => product.type === action.payload.incData
-      );
-      const newCartItems = data.filter(
-        (item) => item.type !== action.payload.incData
-      );
 
-      console.log(foundProduct, index, newCartItems, "ooo");
+      const countVal = (items) => {
+        const newCount = items.qty === 1 ? items.qty + 1 : items.qty;
+        return items.price * newCount;
+      };
 
       switch (action.payload.inc) {
         case "increment":
           const data = JSON.parse(JSON.stringify(state.cartItem));
-          data.filter((items) => items.type === action.payload.incData);
-          state.counter += 1;
+
+          const foundProduct = data.map((items) => {
+            console.log(
+              `${items.price} ${items.qty}   =${items.price * items.qty} }`,
+              "oooo"
+            );
+            return items.type === action.payload.incData
+              ? {
+                  ...items,
+                  qty: items.qty + 1,
+                  totalprice: countVal(items),
+                }
+              : items;
+          });
+          return { cartItem: foundProduct };
           break;
         case "decrement":
-          state.counter > 0 ? (state.counter -= 1) : "";
+          const datas = JSON.parse(JSON.stringify(state.cartItem));
+
+          const foundProducts = datas.map((items) => {
+            return items.type === action.payload.incData
+              ? {
+                  ...items,
+                  qty: items.qty - 1,
+                  totalprice: items.price * items.qty,
+                }
+              : items;
+          });
+          return { cartItem: foundProducts };
           break;
         default:
           state.counter;

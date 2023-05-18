@@ -22,6 +22,8 @@ export default function Drawers() {
     right: false,
   });
 
+  const [value, setValue] = useState(1);
+  console.log(value, " value ");
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -41,11 +43,11 @@ export default function Drawers() {
       //   onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className="text-[#019376] p-4 flex justify-between">
-        <p>{cartItem.length} Items</p>
+        <p>{cartItem?.length} Items</p>
         <CancelIcon onClick={toggleDrawer(anchor, false)} />
       </List>
       <Divider />
-      {cartItem.map((items) => {
+      {cartItem?.map((items, ind) => {
         return (
           <>
             <List className="flex justify-between mt-10">
@@ -62,9 +64,10 @@ export default function Drawers() {
                 <div className="flex justify-center">
                   <input
                     type="text"
-                    value={counter}
+                    value={items?.qty}
                     name=""
                     id=""
+                    // onClick={(e) => setValue(e.target.value)}
                     className="w-4"
                   />
                 </div>
@@ -89,11 +92,13 @@ export default function Drawers() {
               </div>
               <div className="flex flex-col justify-center  items-center px-4 ">
                 <p className="text-sm font-bold">{items?.type}</p>
-                <p className="text-xs mt-2 text-[#019376]">{items?.price} </p>
-                <p className="text-xs mt-2 text-[#019376]">$3.00*3</p>
+                <p className="text-xs mt-2 text-[#019376]">${items.price} </p>
+                <p className="text-xs mt-2 text-[#019376]">
+                  ${items.price}*{items?.qty}
+                </p>
               </div>
               <div className="flex justify-start font-bold items-center px-4 text-[#019376]">
-                $100
+                ${items?.totalprice}
               </div>
               <div className="flex justify-center items-center p-2">
                 <CancelIcon onClick={() => dispatch(DELETE(items?.type))} />
@@ -116,7 +121,7 @@ export default function Drawers() {
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)} className="text-white">
-            Cart
+            {cartItem?.length} Cart
           </Button>
           <Drawer
             anchor={anchor}

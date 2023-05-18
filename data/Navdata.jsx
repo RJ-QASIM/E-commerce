@@ -144,22 +144,27 @@ export const products = [
   {
     img: "/images/grocery/fish.jpg",
     price: "100",
-
+    totalprice: "100",
+    qty: 1,
     type: "Fresh Fish",
     maintyp: "grocery",
   },
   {
     img: "/images/grocery/fish.jpg",
     price: "100",
+    totalprice: "100",
 
     maintyp: "grocery",
+    qty: 1,
 
     type: "Fresh Fish",
   },
   {
     img: "/images/grocery/fish.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Fresh Fish",
@@ -169,7 +174,9 @@ export const products = [
     img: "/images/grocery/meat.jpg",
 
     price: "100",
+    totalprice: "100",
 
+    qty: 1,
     maintyp: "grocery",
 
     type: "Meat",
@@ -178,16 +185,19 @@ export const products = [
     img: "/images/grocery/meat.jpg",
 
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Meat",
   },
   {
     img: "/images/grocery/meat.jpg",
-
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 2,
     maintyp: "grocery",
 
     type: "Meat",
@@ -197,7 +207,9 @@ export const products = [
     img: "/images/grocery/sabzi.jpg",
 
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Vegetable",
@@ -206,7 +218,9 @@ export const products = [
     img: "/images/grocery/sabzi.jpg",
 
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Vegetable",
@@ -215,7 +229,9 @@ export const products = [
     img: "/images/grocery/sabzi.jpg",
 
     price: "100",
+    totalprice: "100",
 
+    qty: 1,
     maintyp: "grocery",
 
     type: "Vegetable",
@@ -225,7 +241,9 @@ export const products = [
     img: "/images/grocery/biscuits.jpg",
 
     price: "100",
+    totalprice: "100",
 
+    qty: 1,
     maintyp: "grocery",
 
     type: "Biscuits",
@@ -233,7 +251,9 @@ export const products = [
   {
     img: "/images/grocery/biscuits.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Biscuits",
@@ -241,7 +261,9 @@ export const products = [
   {
     img: "/images/grocery/biscuits.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Biscuits",
@@ -250,6 +272,18 @@ export const products = [
   {
     img: "/images/grocery/fruits.jpg",
     price: "100",
+    totalprice: "100",
+    maintyp: "grocery",
+    qty: 1,
+
+    type: "Fruits",
+  },
+  {
+    img: "/images/grocery/fruits.jpg",
+    price: "100",
+    totalprice: "100",
+    diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Fruits",
@@ -257,15 +291,9 @@ export const products = [
   {
     img: "/images/grocery/fruits.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
-    maintyp: "grocery",
-
-    type: "Fruits",
-  },
-  {
-    img: "/images/grocery/fruits.jpg",
-    price: "100",
-    diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Fruits",
@@ -274,7 +302,9 @@ export const products = [
   {
     img: "/images/grocery/milk.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Milk",
@@ -282,14 +312,18 @@ export const products = [
   {
     img: "/images/grocery/milk.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
+    qty: 1,
 
     type: "Milk",
   },
   {
     img: "/images/grocery/milk.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
+    qty: 1,
 
     type: "Milk",
 
@@ -299,7 +333,9 @@ export const products = [
   {
     img: "/images/grocery/yogourt.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Yogurt",
@@ -307,7 +343,9 @@ export const products = [
   {
     img: "/images/grocery/yogourt.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Yogurt",
@@ -315,7 +353,9 @@ export const products = [
   {
     img: "/images/grocery/yogourt.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Yogurt",
@@ -324,21 +364,27 @@ export const products = [
   {
     img: "/images/grocery/source.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
+    qty: 1,
 
     type: "Source",
   },
   {
     img: "/images/grocery/source.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
+    qty: 1,
 
     type: "Source",
   },
   {
     img: "/images/grocery/source.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Source",
@@ -347,7 +393,9 @@ export const products = [
   {
     img: "/images/grocery/soup.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Soup",
@@ -355,7 +403,9 @@ export const products = [
   {
     img: "/images/grocery/soup.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Soup",
@@ -363,7 +413,9 @@ export const products = [
   {
     img: "/images/grocery/soup.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
+    qty: 1,
 
     type: "Soup",
   },
@@ -371,14 +423,18 @@ export const products = [
   {
     img: "/images/grocery/chocolate.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Chocolates",
     maintyp: "grocery",
   },
   {
     img: "/images/grocery/chocolate.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Chocolates",
@@ -386,7 +442,9 @@ export const products = [
   {
     img: "/images/grocery/chocolate.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Chocolates",
@@ -395,6 +453,18 @@ export const products = [
   {
     img: "/images/grocery/eggs.jpg",
     price: "100",
+    totalprice: "100",
+    maintyp: "grocery",
+    qty: 1,
+
+    type: "Egg",
+  },
+  {
+    img: "/images/grocery/eggs.jpg",
+    price: "100",
+    totalprice: "100",
+    diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Egg",
@@ -402,15 +472,9 @@ export const products = [
   {
     img: "/images/grocery/eggs.jpg",
     price: "100",
-    diccount: "20",
+    totalprice: "100",
     maintyp: "grocery",
-
-    type: "Egg",
-  },
-  {
-    img: "/images/grocery/eggs.jpg",
-    price: "100",
-    maintyp: "grocery",
+    qty: 1,
 
     type: "Egg",
     diccount: "20",
@@ -419,7 +483,9 @@ export const products = [
   {
     img: "/images/grocery/butter.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Butter",
@@ -427,7 +493,9 @@ export const products = [
   {
     img: "/images/grocery/butter.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     maintyp: "grocery",
 
     type: "Butter",
@@ -435,14 +503,17 @@ export const products = [
   {
     img: "/images/grocery/butter.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
-
+    qty: 1,
     type: "Butter",
   },
   {
     img: "/images/bags/handbag.jpg",
     price: "100",
+    totalprice: "100",
     maintyp: "grocery",
+    qty: 1,
 
     type: "Hands Bags",
     maintyp: "Bags",
@@ -450,147 +521,189 @@ export const products = [
   {
     img: "/images/bags/purse.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Purse",
     maintyp: "Bags",
   },
   {
     img: "/images/bags/shoulder.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Shoulder Bags",
     maintyp: "Bags",
   },
   {
     img: "/images/bags/wallet.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Wallet",
     maintyp: "Bags",
   },
   {
     img: "/images/bags/lp.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Laptop Bags",
     maintyp: "Bags",
   },
   {
     img: "/images/bakery/tea.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Tea",
     maintyp: "Bakery",
   },
   {
     img: "/images/bakery/juice.png",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Juice",
     maintyp: "Bakery",
   },
   {
     img: "/images/bakery/cake.png",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Cake",
     maintyp: "Bakery",
   },
   {
     img: "/images/makeup/face.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Face",
     maintyp: "Makeup",
   },
   {
     img: "/images/makeup/lips.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Lips",
     maintyp: "Makeup",
   },
   {
     img: "/images/makeup/eye.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Eye",
     maintyp: "Makeup",
   },
   {
     img: "/images/cloth/man.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Man Dress",
     maintyp: "Clothing",
   },
   {
     img: "/images/cloth/women.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Women Dress",
     maintyp: "Clothing",
   },
   {
     img: "/images/cloth/pant.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Pants",
     maintyp: "Clothing",
   },
   {
     img: "/images/cloth/shirt.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Shirts",
     maintyp: "Clothing",
   },
   {
     img: "/images/furniture/table.png",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Table",
     maintyp: "Furniture",
   },
   {
     img: "/images/furniture/bed.png",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Bed",
     maintyp: "Furniture",
   },
   {
     img: "/images/furniture/chair.png",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Chair",
     maintyp: "Furniture",
   },
   {
     img: "/images/furniture/sofa.png",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Sofa",
     maintyp: "Furniture",
   },
   {
     img: "/images/books/urdu.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Urdu",
     maintyp: "Books",
   },
   {
     img: "/images/books/english.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "English",
     maintyp: "Books",
   },
   {
     img: "/images/books/poet.jpg",
     price: "100",
+    totalprice: "100",
     diccount: "20",
+    qty: 1,
     type: "Poets",
     maintyp: "Books",
   },
@@ -617,6 +730,7 @@ export const bgImg = [
     img: "/images/bg/Cover.png",
     type: "Books",
   },
+
   {
     img: "/images/bg/furniture.jpg",
     type: "Furniture",

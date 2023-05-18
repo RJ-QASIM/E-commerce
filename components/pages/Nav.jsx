@@ -1,6 +1,16 @@
 import React from "react";
 import Menu from "../uiElements/Menu";
+import { GET_URL } from "@/redux/reducer/geturl";
+import { useDispatch, useSelector } from "react-redux";
 export default function Nav() {
+  const dispatch = useDispatch();
+  const { url } = useSelector((state) => state.geturl);
+
+  React.useEffect(() => {
+    var pagePath = window?.location?.href;
+    dispatch(GET_URL(pagePath));
+  }, []);
+
   return (
     <div className="border flex justify-between items-center h-20 px-12 ">
       <div className="flex justify-between  w-96   ">

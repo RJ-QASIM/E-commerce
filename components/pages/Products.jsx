@@ -1,8 +1,12 @@
-import Image from "next/image";
 import React from "react";
-import Modals from "../uiElements/Modal";
-
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { GET_DETAIL_ITEM } from "@/redux/reducer/products";
+import { useDispatch } from "react-redux";
 export default function Products({ elm }) {
+  const router = useRouter();
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className=" bg-[#FFFFFF] rounded-3xl">
@@ -29,8 +33,14 @@ export default function Products({ elm }) {
           </div>
           <div className="text-gray-700 text-xs">{elm?.type}</div>
         </div>
-        <h1 className="bg-[#019376] text-center cursor-pointer rounded-b-3xl text-white">
-          <Modals elm={elm} />
+        <h1
+          className="bg-[#019376] text-center cursor-pointer rounded-b-3xl text-white"
+          onClick={() => {
+            dispatch(GET_DETAIL_ITEM(elm));
+            router.push(`/products/${elm?.type}`);
+          }}
+        >
+          Detail view
         </h1>
       </div>
     </>
